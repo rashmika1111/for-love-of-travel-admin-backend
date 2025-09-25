@@ -80,6 +80,7 @@ app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/comments', commentRoutes);
 app.use('/api/v1/media', mediaRoutes);
 
+
 // API documentation endpoint
 app.get('/api/v1', (req, res) => {
   res.json({
