@@ -39,7 +39,7 @@ router.get('/stats', protect, can('post:view'), getPostStats);
 // @access  Private (Contributor+)
 router.post('/', [
   protect,
-  can('post:create'),
+  //can('post:create'),
   body('title').trim().isLength({ min: 1, max: 200 }).withMessage('Title is required and must be less than 200 characters'),
   body('body').trim().isLength({ min: 50 }).withMessage('Body must be at least 50 characters'),
   body('tags').optional().isArray().withMessage('Tags must be an array'),
